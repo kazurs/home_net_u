@@ -50,7 +50,6 @@ services:
 
   fluentd:
     build: ./fluentd
-    image: fluentd-img
     environment:
       FLUENT_CONF: /fluentd/etc/fluent.conf
     volumes:
@@ -64,7 +63,6 @@ services:
 
   rsyslog:
     build: ./rsyslog
-    image: rsyslog-img
     volumes:
       - ./rsyslog/files/etc/:/rsyslog/etc/
     environment:
